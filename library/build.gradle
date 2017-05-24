@@ -1,5 +1,35 @@
 apply plugin: 'com.android.library'
 
+ext {
+    PUBLISH_GROUP_ID = 'ninjaman494'
+    PUBLISH_ARTIFACT_ID = 'expandable-textview'
+    PUBLISH_VERSION = '1.0'
+}
+
+/*ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'fb-like'
+
+    publishedGroupId = 'ninjaman494'
+    libraryName = 'ExpandableTextView'
+    artifact = 'expandable-textview'
+
+    libraryDescription = 'An Expandable TextView that allows for separate text in collapsed and expanded sections.'
+
+    siteUrl = 'https://github.com/Ninjaman494/ExpandableTextView'
+    gitUrl = 'https://github.com/Ninjaman494/ExpandableTextView.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'ninjaman494'
+    developerName = 'Akash Eldo'
+    developerEmail = 'akasheldo@hotmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}*/
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
@@ -29,3 +59,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     //compile project(path: ':sample')
 }
+
+apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'

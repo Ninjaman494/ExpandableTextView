@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 /** A custom View which replicates the Google Play Store dropdown description. Uses two TextViews
  * to achieve this effect, one for the "blurb" and another for the full description("desp"). Each
  * half of the View can be independently stylized.
@@ -78,6 +80,14 @@ public class ExpandableTextView extends LinearLayout {
 
     public void setDespText(String text){
         despView.setText(text);
+    }
+
+    public TextView getBlurbView(){
+        return blurbView;
+    }
+
+    public TextView getDespView(){
+        return despView;
     }
 
     public void toggle() {
