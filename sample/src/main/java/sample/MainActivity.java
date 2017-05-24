@@ -1,9 +1,12 @@
 package sample;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import ninjaman494.expandabletextview.ExpandableTextView;
 import ninjaman494.sample.R;
@@ -23,7 +26,12 @@ public class MainActivity extends AppCompatActivity {
         etv.setBlurbText(blurbExample);
         etv.setDespText(despExample);
 
+        etv.setAnimSpeed(150);
         etv.setCollapsedLineCount(4);
+        TextView blurb = etv.getBlurbView();
+        blurb.setGravity(Gravity.CENTER);
+        blurb.setTypeface(null, Typeface.BOLD);
+        blurb.setTextSize(16);
 
         Button btn = (Button)findViewById(R.id.btn);
         btn.setOnClickListener(new View.OnClickListener() {

@@ -29,6 +29,7 @@ public class ExpandableTextView extends LinearLayout {
     private TextView despView;
     private boolean isExpanded = false;
     private int collapsedLineCount = 2;
+    private int animSpeed = 375;
 
     private void init(Context context){
         View root = inflate(context,R.layout.expandable_textview,this);
@@ -82,6 +83,10 @@ public class ExpandableTextView extends LinearLayout {
         despView.setText(text);
     }
 
+    public void setAnimSpeed(int animSpeed){
+        this.animSpeed = animSpeed;
+    }
+
     public TextView getBlurbView(){
         return blurbView;
     }
@@ -98,7 +103,7 @@ public class ExpandableTextView extends LinearLayout {
 
             int expandedHeight = despView.getLineCount() * despView.getLineHeight();
             ObjectAnimator animation = ObjectAnimator.ofInt(despView, "Height",expandedHeight);
-            animation.setDuration(375);
+            animation.setDuration(animSpeed);
             animation.start();
         } else {
             System.out.println("Collapsing");
@@ -106,7 +111,7 @@ public class ExpandableTextView extends LinearLayout {
             despView.setMaxLines(0);
 
             ObjectAnimator animation = ObjectAnimator.ofInt(despView, "Height",0);
-            animation.setDuration(375);
+            animation.setDuration(animSpeed);
             animation.start();
         }
     }
