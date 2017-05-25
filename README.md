@@ -8,8 +8,17 @@ View is split into two portions,blurb and description. The blurb portion is
 displayed when the View is collapsed or expanded. The description portion is only shown when the View is expanded. Each section is a TextView,
 this means that each portion can be independtly stylized just like a TextView. See the sample code for an example.
 
-## Usage
+## Dependency
 
+```groovy
+
+dependencies {
+    compile 'ninjaman494:expandable-textview:1.1.1'
+}
+
+```
+
+## Usage
 Simply add the View to the Activity or Fragment's XML.
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -76,12 +85,20 @@ In order to expand or collapse the view call the ``` toggle() ``` method. This i
 ## Requirments
 Minimum SDK is 16
 
-## Dependency
 
-```groovy
+## License
+```
+Copyright 2017 Akash Eldo
 
-dependencies {
-    compile 'ninjaman494:expandable-textview:1.1.1'
-}
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
 
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
 ```
