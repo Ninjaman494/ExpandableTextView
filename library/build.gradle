@@ -3,7 +3,7 @@ apply plugin: 'com.android.library'
 ext {
     PUBLISH_GROUP_ID = 'ninjaman494'
     PUBLISH_ARTIFACT_ID = 'expandable-textview'
-    PUBLISH_VERSION = '1.1'
+    PUBLISH_VERSION = '1.1.1'
 }
 
 android {
