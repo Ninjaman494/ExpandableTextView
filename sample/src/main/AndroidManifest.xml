@@ -2,7 +2,7 @@
 
     package="ninjaman494.sample">
 
-    <uses-sdk android:maxSdkVersion="16"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"

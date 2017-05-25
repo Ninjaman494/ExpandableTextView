@@ -28,16 +28,27 @@ public class MainActivity extends AppCompatActivity {
 
         etv.setAnimSpeed(150);
         etv.setCollapsedLineCount(4);
+
+        //Styling blurb portion
         TextView blurb = etv.getBlurbView();
         blurb.setGravity(Gravity.CENTER);
         blurb.setTypeface(null, Typeface.BOLD);
         blurb.setTextSize(16);
+
+        //Styling description portion
+        TextView desp = etv.getDespView();
+        desp.setTextSize(16);
 
         Button btn = (Button)findViewById(R.id.btn);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 etv.toggle();
+                if(etv.isExpanded()){
+                    ((Button)v).setText("Collapse");
+                }else{
+                    ((Button)v).setText("Expand");
+                }
             }
         });
     }

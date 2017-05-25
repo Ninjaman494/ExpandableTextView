@@ -7,8 +7,6 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 /** A custom View which replicates the Google Play Store dropdown description. Uses two TextViews
  * to achieve this effect, one for the "blurb" and another for the full description("desp"). Each
  * half of the View can be independently stylized.
@@ -17,10 +15,13 @@ import org.w3c.dom.Text;
  *  Use as a regular view. To activate dropdown, call toggle()
  *  setBlurbText: set the text for blurb portion
  *  setDespText: set the text for the description portion
+ *  getBlurbView: returns the TextView for the blurb portion, which can then be stylized
+ *  getDespView: returns the TextView for the desp portion, which can then be stylized
  *
  * Optional Attributes(currently not in XML):
  *  startExpanded: starts the View expanded instead of collapsed
  *  setCollapsedLineCount: set the number of lines for the blurb. Default is 3.
+ *  setAnimSpeed: set the expand/collapse animation speed. Default is 375 ms
  *
  * Created by ninjaman494 on 5/23/2017.
  */
@@ -28,7 +29,7 @@ public class ExpandableTextView extends LinearLayout {
     private TextView blurbView;
     private TextView despView;
     private boolean isExpanded = false;
-    private int collapsedLineCount = 2;
+    private int collapsedLineCount = 3;
     private int animSpeed = 375;
 
     private void init(Context context){
