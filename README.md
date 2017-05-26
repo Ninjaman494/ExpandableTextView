@@ -8,8 +8,8 @@ View is split into two portions,blurb and description. The blurb portion is
 displayed when the View is collapsed or expanded. The description portion is only shown when the View is expanded. Each section is a TextView,
 this means that each portion can be independtly stylized just like a TextView. See the sample code for an example.
 
-## Dependency
-
+## Setup
+Add the following dependecy to your app's build.gradle
 ```groovy
 
 dependencies {
